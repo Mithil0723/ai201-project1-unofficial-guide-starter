@@ -84,19 +84,6 @@ with gr.Blocks(
                 interactive=False,
             )
 
-    # Example questions from evaluation plan
-    gr.Examples(
-        examples=[
-            ["What does the research say about curcumin's effect on inflammation?"],
-            ["Why does storing water in copper vessels have health benefits?"],
-            ["What is the nutritional reason dal and rice are traditionally eaten together?"],
-            ["What happens metabolically during Ekadashi or similar Indian fasting practices?"],
-            ["What is Ritucharya and why does Ayurveda recommend seasonal eating?"],
-        ],
-        inputs=question_box,
-        label="Try an evaluation question",
-    )
-
     # Wire up button and Enter key
     ask_btn.click(
         fn=handle_question,
